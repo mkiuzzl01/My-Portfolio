@@ -5,15 +5,11 @@ import { Outlet } from "react-router-dom";
 import Banner from "../components/Banner/Banner";
 
 const Layout = () => {
-  
   return (
     <div>
-      <header>
-        <nav className="z-10 top-0 sticky">
-          <Navbar></Navbar>
-        </nav>
-        <Banner></Banner>
-      </header>
+      <nav className="z-10 top-0 sticky">
+        <Navbar></Navbar>
+      </nav>
       <div className="min-h-[calc(100vh-290px)]">
         <Outlet></Outlet>
       </div>

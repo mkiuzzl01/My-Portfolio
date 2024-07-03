@@ -1,9 +1,21 @@
 import { useState, useEffect } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link} from "react-router-dom";
 import "./Navbar.css"; // Import your CSS file for styling
+import { navId } from "./NavId";
 
 const Navbar = () => {
+  const [active,setActive] = useState('Home');
+  const [isScrolled,setScrolled] = useState(false);
   const [scroll, setScroll] = useState(false);
+
+  const scrollToSection = (navId)=>{
+    const element =document.getElementById(navId);
+    if(element){
+      const marginTop = 0;
+      const scrollToY = element.getBoundingClientRect().top + window.scrollY - marginTop;
+      window.scrollTo({top:scrollToY,behavior:'smooth'});
+    }
+  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,32 +32,6 @@ const Navbar = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-
-  const navLink = (
-    <>
-      <li>
-        <NavLink to="/">Home</NavLink>
-      </li>
-      <li>
-        <NavLink to="/About_Me">About Me</NavLink>
-      </li>
-      <li>
-        <NavLink to="/Skills">Skills</NavLink>
-      </li>
-      <li>
-        <NavLink to="/Experience">Experience</NavLink>
-      </li>
-      <li>
-        <NavLink to="/Projects">Projects</NavLink>
-      </li>
-      <li>
-        <NavLink to="/Education">Education</NavLink>
-      </li>
-      <li>
-        <NavLink to="/Contact">Contact US</NavLink>
-      </li>
-    </>
-  );
 
   return (
     <div>
@@ -72,14 +58,26 @@ const Navbar = () => {
               tabIndex={0}
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
             >
-              {navLink}
+              {
+                navId.map((id,i)=>(
+                  <li key={i} onClick={()=> scrollToSection(id)}>
+                    <Link to='/' className="active">{id}</Link>
+                  </li>
+                ))
+              }
             </ul>
           </div>
           <a className="btn btn-ghost text-xl">MD Khairul Islam</a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
-            {navLink}
+          {
+                navId.map((id,i)=>(
+                  <li key={i} onClick={()=> scrollToSection(id)}>
+                    <Link to='/' className="active">{id}</Link>
+                  </li>
+                ))
+              }
           </ul>
         </div>
         <div className="navbar-end">

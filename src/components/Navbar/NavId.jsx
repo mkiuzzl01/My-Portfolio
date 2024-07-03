@@ -1,0 +1,1 @@
+export const navId = ['Home','About_Me','Skills','Experience','Projects','Education','Contact'];

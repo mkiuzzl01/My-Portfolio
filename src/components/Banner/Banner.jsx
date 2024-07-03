@@ -3,7 +3,7 @@ import { Parallax } from "react-parallax";
 
 const Banner = () => {
   return (
-    <div className="relative h-screen -top-20 pt-24 flex items-center justify-center overflow-hidden bg-gray-100">
+    <section id="Home" className="relative h-screen -top-20 pt-24 flex items-center justify-center overflow-hidden bg-gray-100">
       <div className="absolute inset-0 z-0">
         <svg
           className="w-full h-full"
@@ -83,8 +83,8 @@ const Banner = () => {
             >
               Hire Me
             </a>
-            <a
-              href="#cv"
+            <a 
+              href="https://drive.google.com/file/d/1X8FDAqHhxiQPaSYY3EHMwUKvNIJ-MjUM/view" target="blank"
               className="inline-block bg-yellow-500 text-white px-6 py-2 rounded-full text-lg hover:bg-yellow-600 transition"
             >
               Download CV
@@ -101,7 +101,7 @@ const Banner = () => {
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

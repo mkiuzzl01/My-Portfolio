@@ -1,7 +1,7 @@
 
 const About_Me = () => {
   return (
-      <div className="container lg:px-36 mx-auto my-10 px-4 md:flex md:items-center">
+      <section id="About_Me" className="container lg:px-36 mx-auto my-10 px-4 md:flex md:items-center">
         {/* Image Section */}
         <div className="md:w-1/2 flex justify-center md:justify-start">
           <div className="relative">
@@ -44,7 +44,7 @@ const About_Me = () => {
             See Work
           </a>
         </div>
-      </div>
+      </section>
   );
 };
 
