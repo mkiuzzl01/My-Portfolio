@@ -5,10 +5,11 @@ import { Outlet } from "react-router-dom";
 import Banner from "../components/Banner/Banner";
 
 const Layout = () => {
+  
   return (
     <div>
       <header>
-        <nav className="sticky top-0 z-10">
+        <nav className="z-10 top-0 sticky">
           <Navbar></Navbar>
         </nav>
         <Banner></Banner>

@@ -1,0 +1,13 @@
+.navbar {
+    transition: background-color 0.3s ease;
+  }
+  
+  .bg-transparent {
+    background-color: transparent;
+  }
+  
+  .bg-white {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  

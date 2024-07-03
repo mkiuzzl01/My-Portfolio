@@ -1,6 +1,26 @@
+import { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
+import "./Navbar.css"; // Import your CSS file for styling
 
 const Navbar = () => {
+  const [scroll, setScroll] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setScroll(true);
+      } else {
+        setScroll(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   const navLink = (
     <>
       <li>
@@ -26,9 +46,10 @@ const Navbar = () => {
       </li>
     </>
   );
+
   return (
     <div>
-      <div className="navbar bg-transparent">
+      <div className={`navbar ${scroll ? 'bg-[#FEF5E7]' : 'bg-transparent'}`}>
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -51,14 +72,14 @@ const Navbar = () => {
               tabIndex={0}
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
             >
-            {navLink}
+              {navLink}
             </ul>
           </div>
           <a className="btn btn-ghost text-xl">MD Khairul Islam</a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
-          {navLink}
+            {navLink}
           </ul>
         </div>
         <div className="navbar-end">
