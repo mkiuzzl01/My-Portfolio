@@ -1,0 +1,9 @@
+/* Custom CSS for the background shapes */
+.clip-path-1 {
+    clip-path: polygon(0 0, 50% 0, 30% 100%, 0% 100%);
+  }
+  
+  .clip-path-2 {
+    clip-path: polygon(70% 0, 100% 0, 100% 100%, 50% 100%);
+  }
+  

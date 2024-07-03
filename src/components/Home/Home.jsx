@@ -1,9 +1,11 @@
 import React from 'react';
+import About_Me from '../About_Me/About_Me';
+
 
 const Home = () => {
     return (
         <div>
-            <h1>This is Home</h1>
+           <About_Me></About_Me>
         </div>
     );
 };
