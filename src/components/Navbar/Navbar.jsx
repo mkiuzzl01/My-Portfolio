@@ -5,7 +5,6 @@ import { navId } from "./NavId";
 
 const Navbar = () => {
   const [active,setActive] = useState('Home');
-  const [isScrolled,setScrolled] = useState(false);
   const [scroll, setScroll] = useState(false);
 
   const scrollToSection = (navId)=>{
@@ -17,13 +16,26 @@ const Navbar = () => {
     }
   }
 
+  const determineActiveSection = ()=>{
+    for(let i=navId.length - 1; i>=0; i--){
+      const section = document.getElementById(navId[i]);
+      if(section){
+        const rect = section.getBoundingClientRect();
+        if(rect.top <=120 && rect.bottom >=120){
+          setActive(navId[i]);
+          break;
+        }
+      }
+    }
+  }
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 0) {
+      if (window.scrollY > 300) {
         setScroll(true);
       } else {
         setScroll(false);
       }
+      determineActiveSection();
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -70,11 +82,11 @@ const Navbar = () => {
           <a className="btn btn-ghost text-xl">MD Khairul Islam</a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
+          <ul className="space-x-4 menu-horizontal px-1">
           {
                 navId.map((id,i)=>(
                   <li key={i} onClick={()=> scrollToSection(id)}>
-                    <Link to='/' className="active">{id}</Link>
+                    <Link to='/' className={active === id ? 'border-b-2 rounded-none border-red-500 font-bold pb-2 ':'font-bold '}>{id}</Link>
                   </li>
                 ))
               }

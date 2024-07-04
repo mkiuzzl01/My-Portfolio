@@ -1,1 +1,1 @@
-export const navId = ['Home','About_Me','Skills','Experience','Projects','Education','Contact'];
+export const navId = ['Home','About Me','Skills','Experience','Projects','Education','Contact'];

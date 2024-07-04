@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHtml5, faCss3Alt, faJs, faReact, faNodeJs, faGithub, } from '@fortawesome/free-brands-svg-icons';
+import { faHtml5, faCss3Alt, faJs, faReact, faNodeJs, faGithub, faFigma } from '@fortawesome/free-brands-svg-icons';
 import { faDatabase, faLock, faFire, faCodeBranch, faServer } from '@fortawesome/free-solid-svg-icons';
 
 const skills = [
@@ -15,6 +15,7 @@ const skills = [
   { name: 'MongoDB', icon: faDatabase, link: 'https://www.mongodb.com/' },
   { name: 'JWT', icon: faLock, link: 'https://jwt.io/' },
   { name: 'GitHub', icon: faGithub, link: 'https://github.com/' },
+  { name: 'Figma', icon: faFigma, link: 'https://figma.com/' },
 ];
 
 const Skills = () => {
