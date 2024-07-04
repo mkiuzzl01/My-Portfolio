@@ -1,0 +1,27 @@
+/* project.css */
+
+.hover-scale {
+    transition: transform 0.5s;
+  }
+  .hover-scale:hover {
+    transform: scale(1.05);
+  }
+  
+  .img-hover-zoom {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    transition: 0.5s ease-in-out;
+  }
+  .img-hover-zoom:hover {
+    background-position: bottom center;
+  }
+  
+  .hover-opacity {
+    opacity: 0;
+    transition: 0.5s;
+  }
+  .hover-scale:hover .hover-opacity {
+    opacity: 1;
+  }
+  

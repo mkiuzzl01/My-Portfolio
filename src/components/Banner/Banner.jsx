@@ -78,7 +78,7 @@ const Banner = () => {
           </p>
           <div className="flex justify-center md:justify-start">
             <a
-              onClick={()=>scrollToSection('Contact ')}
+              onClick={()=>scrollToSection('Contact')}
               className="inline-block bg-orange-500 text-white px-6 py-2 rounded-full text-lg hover:bg-orange-600 transition mr-4"
             >
               Hire Me

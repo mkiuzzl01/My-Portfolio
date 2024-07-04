@@ -69,18 +69,18 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              className="space-y-4  menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
             >
               {
-                navId.map((id,i)=>(
+                 navId.map((id,i)=>(
                   <li key={i} onClick={()=> scrollToSection(id)}>
-                    <Link to='/' className="active">{id}</Link>
+                    <Link to='/' className={active === id ? 'border-b-2 rounded-none border-red-500 font-bold pb-2 ':'font-bold '}>{id}</Link>
                   </li>
                 ))
               }
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">MD Khairul Islam</a>
+          <a className="btn btn-ghost text-xl" onClick={()=>scrollToSection("Home")}>MD Khairul Islam</a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="space-x-4 menu-horizontal px-1">
@@ -94,7 +94,7 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <Link className="btn">Github</Link>
+          <Link to="https://github.com/mkiuzzl01" target="blank" className="btn">Github</Link>
         </div>
       </div>
     </div>

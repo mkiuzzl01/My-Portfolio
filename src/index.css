@@ -1,3 +1,4 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import './components/Projects/Projects.css'; /* Import the custom CSS file */
