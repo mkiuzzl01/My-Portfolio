@@ -8,18 +8,18 @@ import { faGraduationCap, faSchool, faBook, faChalkboardTeacher } from '@fortawe
 const education = [
   {
     id: 1,
-    institution: 'University Name',
+    institution: 'Southeast University',
     degree: 'Bachelor of Science in Computer Science',
-    year: '2016 - 2020',
-    description: 'Graduated with honors, focusing on software development and data science.',
+    year: '2022 Running',
+    description: 'Focusing on software Development and Technical sites.',
     icon: faGraduationCap,
   },
   {
     id: 2,
-    institution: 'High School Name',
-    degree: 'High School Diploma',
+    institution: 'Barisal Polytechnic Institute',
+    degree: 'Diploma in Computer Engineering',
     year: '2012 - 2016',
-    description: 'Graduated with top marks in science and mathematics.',
+    description: 'Graduated with top marks in Technical Subjects.',
     icon: faSchool,
   },
 ];
@@ -27,19 +27,19 @@ const education = [
 const courses = [
   {
     id: 1,
-    course: 'React for Beginners',
-    platform: 'Udemy',
-    year: '2021',
-    description: 'Learned the basics of React, including components, state, and props.',
-    icon: faBook,
+    course: 'Web Development',
+    platform: 'Programming Hero',
+    year: '2024',
+    description: 'Deep dive into JavaScript ES6, asynchronous programming, React , Node, Express, MongoDB and  more.',
+    icon: faChalkboardTeacher,
   },
   {
     id: 2,
-    course: 'Advanced JavaScript',
-    platform: 'Coursera',
-    year: '2020',
-    description: 'Deep dive into JavaScript ES6, asynchronous programming, and more.',
-    icon: faChalkboardTeacher,
+    course: 'Web Development',
+    platform: 'Bangladesh Hi-Tech Park Authority',
+    year: '2022',
+    description: 'Learned the basics of HTML,CSS,JavaScript, and more',
+    icon: faBook,
   },
   // Add more courses as needed
 ];

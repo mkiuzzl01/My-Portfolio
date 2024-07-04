@@ -1,45 +1,29 @@
 import React, { useEffect } from "react";
-import { FaFacebook, FaGoogle, FaCircle } from "react-icons/fa";
+import { FaGoogle, FaCircle, FaIndustry } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 const experiences = [
   {
     id: 1,
-    role: "UX / UI Designer",
-    company: "Facebook",
-    period: "2019-21",
+    role: "Junior Web Developer",
+    type:"Industrial attachment",
+    company: "Kaizen IT Ltd",
+    period: "15 May 23 - 31 Aug 23",
     description:
-      "The generated injected humour, or non-characteristic words etc. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,",
-    icon: <FaFacebook className="text-blue-600" />,
+      "Utilized HTML, CSS, JavaScript to build responsive and user-friendly web applications",
+    icon: <FaIndustry className="text-blue-600" />,
   },
   {
     id: 2,
-    role: "Sr. UX / UI Designer",
-    company: "Google Tech.",
-    period: "2018-19",
+    role: "Junior Web Designer",
+    company: "Sohoj it & Freelancing care",
+    period: "1 Jan 22 - 30 Oct 22",
     description:
-      "The generated injected humour, or non-characteristic words etc. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,",
-    icon: <FaGoogle className="text-red-500" />,
+      "Applied modern front-end technologies and frameworks such as Tailwind CSS and Bootstrap to enhance the visual appeal and functionality of web pages.",
+    icon: <FaIndustry className="text-red-500" />,
   },
-  {
-    id: 3,
-    role: "Jr. UX / UI Designer",
-    company: "Lenovo Ltd.",
-    period: "2016-18",
-    description:
-      "The generated injected humour, or non-characteristic words etc. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,",
-    icon: <FaGoogle className="text-red-500" />,
-  },
-  {
-    id: 4,
-    role: "Front-end Web Designer",
-    company: "Circle CI",
-    period: "2015-16",
-    description:
-      "The generated injected humour, or non-characteristic words etc. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,",
-    icon: <FaCircle className="text-blue-600" />,
-  },
+  
 ];
 
 const ExperienceSection = () => {
@@ -52,7 +36,7 @@ const ExperienceSection = () => {
       <div className="text-center pb-10 pt-24">
         <h1 className="text-3xl font-semibold" data-aos="fade-down">Work Experience</h1>
         <p data-aos="fade-up">
-          Obviously I'm a Web Designer. Web Developer with over 7 years of
+          Obviously I'm a Web Designer. Web Developer with over 1 year of
           experience. Experienced with all stages of the development.
         </p>
       </div>
@@ -78,6 +62,7 @@ const ExperienceSection = () => {
                 <h4 className="text-xl font-medium text-gray-900">
                   {experience.role}
                 </h4>
+                <p className="italic">{experience?.type}</p>
                 <p className="text-sm text-gray-500">
                   {experience.company} • {experience.period}
                 </p>
