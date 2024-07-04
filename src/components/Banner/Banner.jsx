@@ -1,9 +1,9 @@
-import React from "react";
-import { Parallax } from "react-parallax";
+
+import { scrollToSection } from "../Navbar/Navbar";
 
 const Banner = () => {
   return (
-    <section id="Home" className="relative h-screen -top-20 pt-24 flex items-center justify-center overflow-hidden bg-gray-100">
+    <section id="Home" className="relative h-screen -top-16 pt-24 flex items-center justify-center overflow-hidden bg-gray-100">
       <div className="absolute inset-0 z-0">
         <svg
           className="w-full h-full"
@@ -78,7 +78,7 @@ const Banner = () => {
           </p>
           <div className="flex justify-center md:justify-start">
             <a
-              href="#hire"
+              onClick={()=>scrollToSection('Contact ')}
               className="inline-block bg-orange-500 text-white px-6 py-2 rounded-full text-lg hover:bg-orange-600 transition mr-4"
             >
               Hire Me

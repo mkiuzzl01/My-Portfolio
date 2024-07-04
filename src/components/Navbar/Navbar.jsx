@@ -3,18 +3,19 @@ import { Link} from "react-router-dom";
 import "./Navbar.css"; // Import your CSS file for styling
 import { navId } from "./NavId";
 
+export const scrollToSection = (navId)=>{
+  const element =document.getElementById(navId);
+  if(element){
+    const marginTop = 0;
+    const scrollToY = element.getBoundingClientRect().top + window.scrollY - marginTop;
+    window.scrollTo({top:scrollToY,behavior:'smooth'});
+  }
+}
+
 const Navbar = () => {
   const [active,setActive] = useState('Home');
   const [scroll, setScroll] = useState(false);
 
-  const scrollToSection = (navId)=>{
-    const element =document.getElementById(navId);
-    if(element){
-      const marginTop = 0;
-      const scrollToY = element.getBoundingClientRect().top + window.scrollY - marginTop;
-      window.scrollTo({top:scrollToY,behavior:'smooth'});
-    }
-  }
 
   const determineActiveSection = ()=>{
     for(let i=navId.length - 1; i>=0; i--){
