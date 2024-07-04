@@ -23,9 +23,7 @@ const Skills = () => {
     <section id="Skills" className="py-16">
       <div className="container mx-auto text-center">
         <h2 className="text-3xl font-bold mb-4">Skills</h2>
-        <p className="text-gray-600 mb-12">
-          Obviously I'm a Web Designer. Web Developer with over 7 years of experience. Experienced with all stages of the development.
-        </p>
+        <p className="text-gray-600 mb-12">I have a strong foundation in frontend development, specializing in technologies like HTML5, CSS3, JavaScript, React.js, and responsive design. <br /> I also excel in backend technologies such as Node.js, Express.js, MongoDB, and Firebase for authentication. <br /> Continuously upgrading my skills to stay current with the latest trends and technologies in web development.</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {skills.map((skill, index) => (
             <a

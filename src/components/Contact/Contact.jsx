@@ -65,10 +65,9 @@ const Contact = () => {
   return (
     <section id="Contact">
       <div className="text-center pb-10 pt-24">
-        <h1 className="text-3xl font-semibold">Get In Touch!</h1>
+        <h1 className="text-3xl font-bold mb-4">Get In Touch!</h1>
         <p>
-          Obviously I'm a Web Designer. Web Developer with over 7 years of
-          experience. Experienced with all stages of the development.
+        I'm eager to connect with you! Whether you have a project in mind, a question, or just want to say hello, <br /> feel free to reach out. Let's collaborate and bring your ideas to life!
         </p>
       </div>
       <div className="flex flex-col-reverse items-center lg:flex-row lg:justify-evenly mb-16">
