@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css"; // Import your CSS file for styling
-import { navId } from "./NavId";
 import { IoLogoGithub } from "react-icons/io";
+import { navId } from "./NavId";
 
 export const scrollToSection = (navId) => {
   const element = document.getElementById(navId);
@@ -30,6 +30,7 @@ const Navbar = () => {
       }
     }
   };
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 300) {
@@ -52,7 +53,11 @@ const Navbar = () => {
       <div className={`navbar ${scroll ? "bg-[#FEF5E7]" : "bg-transparent"}`}>
         <div className="navbar-start">
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+            <div
+              tabIndex={0}
+              role="button"
+              className="btn btn-ghost lg:hidden"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -113,18 +118,21 @@ const Navbar = () => {
             ))}
           </ul>
         </div>
-        <div className="navbar-end">
-          {/* <span class="relative flex">
-            <span class="animate-ping bg-sky-400 opacity-75"></span>
-          </span> */}
+        <div className="navbar-end me-5 lg:me-12">
+          <span className="relative flex">
+            <span className="animate-ping absolute h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+            <div className="avatar">
             <Link
               to="https://github.com/mkiuzzl01"
-              target="blank"
-              className="btn"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn flex items-center rounded-full "
             >
-              <IoLogoGithub size={20} />
+              <IoLogoGithub size={20} className="" />
               GitHub
             </Link>
+            </div>
+          </span>
         </div>
       </div>
     </div>

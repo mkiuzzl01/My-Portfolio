@@ -1,4 +1,5 @@
 import { scrollToSection } from "../Navbar/Navbar";
+import { FaHandPointRight } from "react-icons/fa6";
 
 const About_Me = () => {
   return (
@@ -45,12 +46,13 @@ const About_Me = () => {
           communication to achieve outstanding results.
         </p>
         <p className="text-lg text-gray-600 font-semibold mb-6">
-        Let's connect and create something amazing together!
+          Let's connect and create something amazing together!
         </p>
         <a
-          onClick={()=>scrollToSection("Projects")}
-          className="inline-block bg-yellow-500 text-white px-6 py-2 rounded-full text-lg hover:bg-yellow-600 transition"
+          onClick={() => scrollToSection("Projects")}
+          className="flex btn bg-yellow-500 text-white px-6 py-2 rounded-full text-lg hover:bg-yellow-600 transition"
         >
+          <FaHandPointRight />
           See Work
         </a>
       </div>

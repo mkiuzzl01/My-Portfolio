@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail, MdLocationPin } from "react-icons/md";
 import axios from "axios";
 import Swal from "sweetalert2";
+import AOS from 'aos';
 import 'animate.css';
 
 const Contact = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1200 });
+  }, []);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const form = e.target;
@@ -38,7 +43,7 @@ const Contact = () => {
         Swal.fire({
             position: "top",
             icon: "success",
-            title: "Your work has been saved",
+            title: "Successfully sent your massage",
             showConfirmButton: false,
             timer: 1500,
             showClass: {
@@ -61,7 +66,7 @@ const Contact = () => {
       console.error(error.response ? error.response.data : error.message);
     }
   };
-
+  
   return (
     <section id="Contact">
       <div className="text-center pb-10 pt-24 animate__animated animate__fadeInDown">
