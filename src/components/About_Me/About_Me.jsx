@@ -9,11 +9,11 @@ const About_Me = () => {
     >
       {/* Image Section */}
       <div className="md:w-1/2 flex justify-center md:justify-start">
-        <div className="relative">
+        <div className="relative border-r-yellow-500 border-r-4 p-2 border-b-orange-500 border-b-2 rounded-br-lg">
           <img
             src="https://i.ibb.co/c1Lcb1R/Whats-App-Image-2024-05-19-at-13-45-31-5fcd2d50.jpg"
             alt="MD Khairul Islam"
-            className="rounded-full w-80 h-80 object-cover"
+            className="rounded-full w-80 h-80 lg:w-96 lg:h-96 object-cover"
           />
           <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/4 bg-white rounded-lg shadow-lg p-2">
             <p className="text-gray-600  font-semibold">Web Development</p>
