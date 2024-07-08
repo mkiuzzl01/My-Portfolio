@@ -64,15 +64,15 @@ const Contact = () => {
 
   return (
     <section id="Contact">
-      <div className="text-center pb-10 pt-24">
+      <div className="text-center pb-10 pt-24 animate__animated animate__fadeInDown">
         <h1 className="text-3xl font-bold mb-4">Get In Touch!</h1>
         <p>
         I'm eager to connect with you! Whether you have a project in mind, a question, or just want to say hello, <br /> feel free to reach out. Let's collaborate and bring your ideas to life!
         </p>
       </div>
-      <div className="flex flex-col-reverse items-center lg:flex-row lg:justify-evenly mb-16">
+      <div className="flex flex-col-reverse items-center lg:flex-row lg:justify-evenly mb-16 animate__animated animate__fadeInUp">
         <div className="w-1/2">
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} className="animate__animated animate__fadeInLeft">
             <div className="grid md:grid-cols-2 md:gap-6">
               <div className="relative z-0 w-full mb-5 group">
                 <input
@@ -85,7 +85,7 @@ const Contact = () => {
                 />
                 <label
                   htmlFor="Name"
-                  className="absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                 >
                   Name
                 </label>
@@ -101,7 +101,7 @@ const Contact = () => {
                 />
                 <label
                   htmlFor="Email"
-                  className="absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                 >
                   Email
                 </label>
@@ -117,7 +117,7 @@ const Contact = () => {
                 />
                 <label
                   htmlFor="Subject"
-                  className="absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                 >
                   Subject
                 </label>
@@ -133,7 +133,7 @@ const Contact = () => {
                 />
                 <label
                   htmlFor="Message"
-                  className="absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                 >
                   Message
                 </label>
@@ -141,7 +141,7 @@ const Contact = () => {
               <div>
                 <button
                   type="submit"
-                  className="inline-block bg-orange-500 text-white px-6 py-2 text-lg hover:bg-orange-600 transition mr-4"
+                  className="inline-block bg-orange-500 text-white px-6 py-2 text-lg hover:bg-orange-600 transition mr-4 animate__animated animate__fadeInUp"
                 >
                   Submit
                 </button>
@@ -149,8 +149,8 @@ const Contact = () => {
             </div>
           </form>
         </div>
-        <div className="divider lg:divider-horizontal">OR</div>
-        <div className="1/2 space-y-4">
+        <div className="divider lg:divider-horizontal animate__animated animate__fadeIn">OR</div>
+        <div className="1/2 space-y-4 animate__animated animate__fadeInRight">
           <div>
             <div className="flex items-center space-x-2">
               <span>

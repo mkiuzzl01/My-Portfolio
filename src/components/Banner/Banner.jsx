@@ -1,9 +1,14 @@
-
 import { scrollToSection } from "../Navbar/Navbar";
+import { MdDownload } from "react-icons/md";
+import { FaCaretRight } from "react-icons/fa";
+import { FaArrowDown } from "react-icons/fa";
 
 const Banner = () => {
   return (
-    <section id="Home" className="relative h-screen md:h-full -top-16 pt-24 flex items-center justify-center overflow-hidden bg-gray-100">
+    <section
+      id="Home"
+      className="relative h-screen md:h-full -top-16 pt-24 flex items-center justify-center overflow-hidden bg-gray-100"
+    >
       <div className="absolute inset-0 z-0">
         <svg
           className="w-full h-full"
@@ -68,32 +73,45 @@ const Banner = () => {
       <div className="relative rounded-lg flex flex-col md:flex-row items-center">
         {/* Left Side: Text */}
         <div className="text-center pt-24 px-4 md:px-0 md:pt-0 md:ps-14 lg:ps-20 md:text-left md:w-1/2">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">Hi, I'm MD Khairul Islam</h1>
+          <h1 className="text-4xl font-bold text-gray-800 mb-4">
+            Hi, I'm MD Khairul Islam
+          </h1>
           <h2 className="text-4xl font-bold text-yellow-500 mb-4">
             Web Developer
           </h2>
           <p className="text-lg text-gray-600 mb-6">
-          A passionate Frontend Developer with a knack for crafting stunning user interfaces and delivering seamless user experiences.
-          I specialize in building responsive and interactive web applications using modern technologies like HTML, CSS, JavaScript, and React.
+            A passionate Frontend Developer with a knack for crafting stunning
+            user interfaces and delivering seamless user experiences. I
+            specialize in building responsive and interactive web applications
+            using modern technologies like HTML, CSS, JavaScript, and React.
           </p>
+          <div className="animate-bounce ms-20 md:ms-10">
+            <span className="text-yellow-500">
+              <FaArrowDown size={30} />
+            </span>
+          </div>
           <div className="flex justify-center md:justify-start">
             <a
-              onClick={()=>scrollToSection('Contact')}
-              className="inline-block bg-orange-500 text-white px-6 py-2 rounded-full text-lg hover:bg-orange-600 transition mr-4"
+              onClick={() => scrollToSection("Contact")}
+              className="flex  items-center bg-orange-500 text-white px-4 py-2 rounded-full text-lg hover:bg-orange-600 transition mr-4 cursor-pointer"
             >
+              <FaCaretRight />
               Hire Me
             </a>
-            <a 
-              href="https://drive.google.com/file/d/1X8FDAqHhxiQPaSYY3EHMwUKvNIJ-MjUM/view" target="blank"
-              className="inline-block bg-yellow-500 text-white px-6 py-2 rounded-full text-lg hover:bg-yellow-600 transition"
+
+            <a
+              href="https://drive.google.com/file/d/1X8FDAqHhxiQPaSYY3EHMwUKvNIJ-MjUM/view"
+              target="blank"
+              className="flex items-center bg-yellow-500 text-white px-4 py-2 rounded-full text-lg hover:bg-yellow-600 transition shadow-lg shadow-sky-400/50"
             >
+              <MdDownload />
               Download CV
             </a>
           </div>
         </div>
 
         {/* Right Side: Image */}
-        <div className="md:w-1/2 pt-24 md:pt-0 md:mt-0 md:ml-10">
+        <div className="md:w-1/2 md:mt-32 lg:mt-0 md:ml-10">
           <img
             src="https://i.ibb.co/qgkYS4N/uzzal.png"
             alt="MD Khairul Islam"

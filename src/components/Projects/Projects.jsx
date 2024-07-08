@@ -4,7 +4,11 @@ import "aos/dist/aos.css";
 import "./Projects.css"; // Import the custom CSS file
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGlobe, faCodeBranch, faServer } from "@fortawesome/free-solid-svg-icons";
+import {
+  faGlobe,
+  faCodeBranch,
+  faServer,
+} from "@fortawesome/free-solid-svg-icons";
 
 const projects = [
   {
@@ -35,8 +39,8 @@ const projects = [
       "MongoDB",
     ],
     liveLink: "https://nearby-care.web.app",
-    githubClientLink: "https://github.com/your-username/project-client",
-    githubServerLink: "https://github.com/your-username/project-server",
+    githubClientLink: "https://github.com/mkiuzzl01/Nearby-Care",
+    githubServerLink: "https://github.com/mkiuzzl01/Nearby-Care-Server",
   },
   {
     id: 2,
@@ -71,8 +75,8 @@ const projects = [
       "MongoDB",
     ],
     liveLink: "https://tech-tools-f4a05.web.app",
-    githubClientLink: "https://github.com/your-username/project-client",
-    githubServerLink: "https://github.com/your-username/project-server",
+    githubClientLink: "https://github.com/mkiuzzl01/Tech-Tools",
+    githubServerLink: "https://github.com/mkiuzzl01/Tech-Tools-Server-site",
   },
   {
     id: 3,
@@ -102,8 +106,8 @@ const projects = [
       "MongoDB",
     ],
     liveLink: "https://travel-mate-9fb7a.web.app",
-    githubClientLink: "https://github.com/your-username/project-client",
-    githubServerLink: "https://github.com/your-username/project-server",
+    githubClientLink: "https://github.com/mkiuzzl01/Travel-Mate",
+    githubServerLink: "https://github.com/mkiuzzl01/Travel-Mate-Server-site",
   },
   // Add more projects as needed
 ];
@@ -130,12 +134,19 @@ const ProjectsSection = () => {
           My Work & Projects
         </h1>
         <p data-aos="fade-up">
-        Explore my portfolio featuring a variety of frontend projects. Each demonstrates my proficiency in building dynamic, responsive web applications using React.js, HTML5, CSS3, and more. <br /> From interactive dashboards to user-friendly interfaces, these projects showcase my dedication to delivering functional and visually appealing solutions. <br /> Dive into each project to see how I blend creativity with technical skills to meet client requirements and surpass expectations.
+          Explore my variety of Projects. Each demonstrates my proficiency in
+          building dynamic, responsive web applications using React.js, HTML5,
+          CSS3, and more. <br /> These projects showcase my dedication to delivering
+          functional and visually appealing solutions, from interactive
+          dashboards to user-friendly interfaces. <br /> Dive into each project to see
+          how I blend creativity with technical skills to meet client
+          requirements and surpass expectations.
         </p>
       </div>
       <div className="mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((project) => (
-          <Link to={project.liveLink}
+          <Link
+            to={project.liveLink}
             key={project.id}
             className="relative overflow-hidden rounded-lg shadow-lg group bg-white"
             data-aos="flip-left"
@@ -156,13 +167,17 @@ const ProjectsSection = () => {
               {activeProject === project.id && (
                 <div className="absolute inset-0 flex items-center justify-center bg-gray-900 bg-opacity-90 transition-opacity duration-300">
                   <div className="text-white text-center p-4 transform translate-y-full transition-transform duration-300 group-hover:translate-y-0">
-                    <h3 className="text-lg font-semibold mb-2">Core Features</h3>
+                    <h3 className="text-lg font-semibold mb-2">
+                      Core Features
+                    </h3>
                     <ul className="text-sm text-gray-300">
-                      {Object.values(project.coreFeatures).map((feature, index) => (
-                        <li key={index} className="mb-2">
-                          {feature}
-                        </li>
-                      ))}
+                      {Object.values(project.coreFeatures).map(
+                        (feature, index) => (
+                          <li key={index} className="mb-2">
+                            {feature}
+                          </li>
+                        )
+                      )}
                     </ul>
                   </div>
                 </div>

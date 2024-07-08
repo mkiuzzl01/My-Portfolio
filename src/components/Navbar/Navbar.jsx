@@ -1,34 +1,35 @@
 import { useState, useEffect } from "react";
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Navbar.css"; // Import your CSS file for styling
 import { navId } from "./NavId";
+import { IoLogoGithub } from "react-icons/io";
 
-export const scrollToSection = (navId)=>{
-  const element =document.getElementById(navId);
-  if(element){
+export const scrollToSection = (navId) => {
+  const element = document.getElementById(navId);
+  if (element) {
     const marginTop = 0;
-    const scrollToY = element.getBoundingClientRect().top + window.scrollY - marginTop;
-    window.scrollTo({top:scrollToY,behavior:'smooth'});
+    const scrollToY =
+      element.getBoundingClientRect().top + window.scrollY - marginTop;
+    window.scrollTo({ top: scrollToY, behavior: "smooth" });
   }
-}
+};
 
 const Navbar = () => {
-  const [active,setActive] = useState('Home');
+  const [active, setActive] = useState("Home");
   const [scroll, setScroll] = useState(false);
 
-
-  const determineActiveSection = ()=>{
-    for(let i=navId.length - 1; i>=0; i--){
+  const determineActiveSection = () => {
+    for (let i = navId.length - 1; i >= 0; i--) {
       const section = document.getElementById(navId[i]);
-      if(section){
+      if (section) {
         const rect = section.getBoundingClientRect();
-        if(rect.top <=120 && rect.bottom >=120){
+        if (rect.top <= 120 && rect.bottom >= 120) {
           setActive(navId[i]);
           break;
         }
       }
     }
-  }
+  };
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 300) {
@@ -39,16 +40,16 @@ const Navbar = () => {
       determineActiveSection();
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   return (
     <div>
-      <div className={`navbar ${scroll ? 'bg-[#FEF5E7]' : 'bg-transparent'}`}>
+      <div className={`navbar ${scroll ? "bg-[#FEF5E7]" : "bg-transparent"}`}>
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -71,30 +72,59 @@ const Navbar = () => {
               tabIndex={0}
               className="space-y-4  menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
             >
-              {
-                 navId.map((id,i)=>(
-                  <li key={i} onClick={()=> scrollToSection(id)}>
-                    <Link to='/' className={active === id ? 'border-b-2 rounded-none border-red-500 font-bold pb-2 ':'font-bold '}>{id}</Link>
-                  </li>
-                ))
-              }
+              {navId.map((id, i) => (
+                <li key={i} onClick={() => scrollToSection(id)}>
+                  <Link
+                    to="/"
+                    className={
+                      active === id
+                        ? "border-b-2 rounded-none border-red-500 font-bold pb-2 "
+                        : "font-bold "
+                    }
+                  >
+                    {id}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl" onClick={()=>scrollToSection("Home")}>MD Khairul Islam</a>
+          <a
+            className="btn btn-ghost text-xl"
+            onClick={() => scrollToSection("Home")}
+          >
+            MD Khairul Islam
+          </a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="space-x-4 menu-horizontal px-1">
-          {
-                navId.map((id,i)=>(
-                  <li key={i} onClick={()=> scrollToSection(id)}>
-                    <Link to='/' className={active === id ? 'border-b-2 rounded-none border-red-500 font-bold pb-2 ':'font-bold '}>{id}</Link>
-                  </li>
-                ))
-              }
+            {navId.map((id, i) => (
+              <li key={i} onClick={() => scrollToSection(id)}>
+                <Link
+                  to="/"
+                  className={
+                    active === id
+                      ? "border-b-2 rounded-none border-red-500 font-bold pb-2 "
+                      : "font-bold "
+                  }
+                >
+                  {id}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
         <div className="navbar-end">
-          <Link to="https://github.com/mkiuzzl01" target="blank" className="btn">Github</Link>
+          {/* <span class="relative flex">
+            <span class="animate-ping bg-sky-400 opacity-75"></span>
+          </span> */}
+            <Link
+              to="https://github.com/mkiuzzl01"
+              target="blank"
+              className="btn"
+            >
+              <IoLogoGithub size={20} />
+              GitHub
+            </Link>
         </div>
       </div>
     </div>

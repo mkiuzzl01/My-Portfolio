@@ -36,7 +36,8 @@ const ExperienceSection = () => {
       <div className="text-center pb-10 pt-24">
         <h1 className="text-3xl font-bold mb-4" data-aos="fade-down">Work Experience</h1>
         <p data-aos="fade-up">
-        With over 6 months of frontend development experience, I excel in creating responsive, visually appealing web interfaces.  Skilled in HTML5, CSS3, JavaScript, and React.js, <br /> I collaborate effectively to deliver high-quality solutions that meet client needs and enhance user experiences. Eager to advance my skills and contribute to innovative web projects.
+        With over 6 months of frontend development experience, I excel in creating responsive, visually appealing web interfaces.Skilled in HTML5, CSS3, JavaScript, and React.js, <br />
+I collaborate effectively to deliver high-quality solutions that meet client needs and enhance user experiences. <br /> I am eager to advance my skills and contribute to innovative web projects.
         </p>
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
