@@ -126,6 +126,7 @@ const Navbar = () => {
               to="https://github.com/mkiuzzl01"
               target="_blank"
               rel="noopener noreferrer"
+              title="Visit My Github Profile"
               className="btn flex items-center rounded-full "
             >
               <IoLogoGithub size={20} className="" />

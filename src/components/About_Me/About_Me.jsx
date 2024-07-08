@@ -49,6 +49,7 @@ const About_Me = () => {
           Let's connect and create something amazing together!
         </p>
         <a
+          title="Visit my projects"
           onClick={() => scrollToSection("Projects")}
           className="flex btn bg-yellow-500 text-white px-6 py-2 rounded-full text-lg hover:bg-yellow-600 transition"
         >

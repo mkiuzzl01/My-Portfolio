@@ -93,6 +93,7 @@ const Banner = () => {
           <div className="flex justify-center md:justify-start">
             <a
               onClick={() => scrollToSection("Contact")}
+              title="Hire me by the email"
               className="flex  items-center bg-orange-500 text-white px-4 py-2 rounded-full text-lg hover:bg-orange-600 transition mr-4 cursor-pointer"
             >
               <FaCaretRight />
@@ -102,6 +103,7 @@ const Banner = () => {
             <a
               href="https://drive.google.com/file/d/1X8FDAqHhxiQPaSYY3EHMwUKvNIJ-MjUM/view"
               target="blank"
+              title="See my resume and consider your decision"
               className="flex items-center bg-yellow-500 text-white px-4 py-2 rounded-full text-lg hover:bg-yellow-600 transition shadow-lg shadow-sky-400/50"
             >
               <MdDownload />
