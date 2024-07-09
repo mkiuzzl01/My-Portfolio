@@ -75,10 +75,10 @@ const Contact = () => {
         I'm eager to connect with you! Whether you have a project in mind, a question, or just want to say hello, <br /> feel free to reach out. Let's collaborate and bring your ideas to life!
         </p>
       </div>
-      <div className="flex flex-col-reverse items-center lg:flex-row lg:justify-evenly mb-16 animate__animated animate__fadeInUp">
-        <div className="w-1/2">
+      <div className="flex px-5 md:px-10 flex-col-reverse items-center lg:flex-row lg:justify-evenly mb-16 animate__animated animate__fadeInUp">
+        <div className="w-full lg:w-1/2">
           <form onSubmit={handleSubmit} className="animate__animated animate__fadeInLeft">
-            <div className="grid md:grid-cols-2 md:gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2  md:gap-4">
               <div className="relative z-0 w-full mb-5 group">
                 <input
                   type="text"
@@ -95,7 +95,7 @@ const Contact = () => {
                   Name
                 </label>
               </div>
-              <div className="relative z-0 w-full mb-5 group">
+              <div className="relative z-0 w-full mb-5 group col-span-2 md:col-span-1">
                 <input
                   type="email"
                   name="Email"
@@ -155,7 +155,7 @@ const Contact = () => {
           </form>
         </div>
         <div className="divider lg:divider-horizontal animate__animated animate__fadeIn">OR</div>
-        <div className="1/2 space-y-4 animate__animated animate__fadeInRight">
+        <div className="w-full lg:w-1/2 space-y-4 animate__animated animate__fadeInRight">
           <div>
             <div className="flex items-center space-x-2">
               <span>

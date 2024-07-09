@@ -10,6 +10,7 @@ import {
   faServer,
 } from "@fortawesome/free-solid-svg-icons";
 
+
 const projects = [
   {
     id: 1,
@@ -17,8 +18,8 @@ const projects = [
     description:
       "Patients book appointments easily. View doctor schedules, locations, and costs. Doctors manage schedules, update in real-time. Patients provide feedback on their booking experience, enhancing transparency and interaction on the platform.",
     imageUrl:
-      "https://i.ibb.co/4K0HpGY/screencapture-nearby-care-web-app-2024-07-04-15-49-25.png",
-    tag: "Both Dark and Light Mode",
+      "https://i.ibb.co/sKLJ7XQ/Nearby-Care-2.png",
+    tag: "Light & Dark Theme Available",
     coreFeatures: {
       Feature_1:
         "=>Doctor Appointment Booking: Enabled users to view and book available appointments, and provide issue details before their visit.",
@@ -48,7 +49,7 @@ const projects = [
     description:
       "Users post and manage tech products. Customers view featured items, interact with voting, reviews, and reports. Dashboard roles include users, moderators, admins. Moderators review posts and reports; admins manage roles, monitor site activity, analyze product data with visual charts. Account verification via profile payments.",
     imageUrl:
-      "https://i.ibb.co/0VpMJNm/screencapture-tech-tools-f4a05-web-app-2024-07-04-15-50-35.png",
+      "https://i.ibb.co/yBWGLKC/Tech-tools.png",
     tag: "Modern",
     coreFeatures: {
       Feature_1: "=>Product Posting: Users can post and modify tech products.",
@@ -84,7 +85,7 @@ const projects = [
     description:
       "Designed for tourist enthusiasts, this website boasts captivating animations for a delightful user experience. Easily explore and gather detailed information on tourist destinations before your visit. With robust security features, it stands out as a trusted leader among tourism platforms, ensuring a secure and enriching experience for all users.",
     imageUrl:
-      "https://i.ibb.co/PhPHZxn/screencapture-travel-mate-9fb7a-web-app-2024-07-04-15-51-22.png",
+      "https://i.ibb.co/0MqYk0W/Travel.png",
     tag: "Light & Dark Theme Available",
     coreFeatures: {
       Feature_1:
@@ -147,6 +148,7 @@ const ProjectsSection = () => {
         {projects.map((project) => (
           <Link
             to={project.liveLink}
+            target="blank"
             key={project.id}
             className="relative overflow-hidden rounded-lg shadow-lg group bg-white"
             data-aos="flip-left"

@@ -9,7 +9,7 @@ const experiences = [
     role: "Junior Web Developer",
     type:"Industrial attachment",
     company: "Kaizen IT Ltd",
-    period: "15 May 23 - 31 Aug 23",
+    period: "10 Oct 22 - 30 Dec 22",
     description:
       "Utilized HTML, CSS, JavaScript to build responsive and user-friendly web applications",
     icon: <FaIndustry className="text-blue-600" />,
