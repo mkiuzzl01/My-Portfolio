@@ -1,8 +1,13 @@
-# React + Vite
+# Website Name: md-khairul-islam
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview :
+Welcome to my portfolio website, a showcase of my expertise in web development and design. This site highlights my skills in creating responsive, visually appealing web interfaces using modern technologies like React.js, Tailwind CSS, and more. You’ll find detailed examples of my work, including projects involving frontend and backend development, data visualization, and e-commerce solutions. Each project demonstrates my ability to deliver high-quality, innovative solutions tailored to various client needs. Explore my portfolio to see how I can bring your ideas to life through clean, efficient code and thoughtful design.
 
-Currently, two official plugins are available:
+## Uses Technology :
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+=> Front-end: HTML, CSS, Tailwind, JavaScript, React js
+
+=> Backend: Node js, Express js
+
+=> Database: MongoDB
+
