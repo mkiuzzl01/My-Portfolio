@@ -1,27 +1,21 @@
-/* project.css */
+.card_container{
+  height: auto;
+  display: flex;
+  justify-content:space-around;
+  width:100%;
+  
+}
 
-.hover-scale {
-    transition: transform 0.5s;
-  }
-  .hover-scale:hover {
-    transform: scale(1.05);
-  }
-  
-  .img-hover-zoom {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top center;
-    transition: 0.5s ease-in-out;
-  }
-  .img-hover-zoom:hover {
-    background-position: bottom center;
-  }
-  
-  .hover-opacity {
-    opacity: 0;
-    transition: 0.5s;
-  }
-  .hover-scale:hover .hover-opacity {
-    opacity: 1;
-  }
-  
+.project_card{
+  height: 500px;
+  width: 400px;
+  background-size:cover;
+  background-position:top;
+  border-radius: 10px;
+  border: 2px solid rebeccapurple;
+  transition: ease-in-out 3s;
+}
+
+.project_card:hover{
+  background-position:bottom;
+} 

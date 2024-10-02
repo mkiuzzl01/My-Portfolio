@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "title": "Nearby-Care",
+    "description": "Patients book appointments easily. View doctor schedules, locations, and costs. Doctors manage schedules, update in real-time. Patients provide feedback on their booking experience, enhancing transparency and interaction on the platform.",
+    "imageUrl": "https://i.ibb.co.com/NCY0MmK/screencapture-nearby-care-web-app-2024-10-02-17-39-43.png",
+    "tag": "Light & Dark Theme Available",
+    "coreFeatures": [
+      "Enabled users to view and book available appointments, and provide issue details before their visit.",
+      "Integrated secure online payments for appointments.",
+      "Developed a doctor dashboard to manage and update real-time schedules and take actions based on bookings."
+    ],
+    "technologiesUsed": [
+      "HTML5",
+      "CSS3",
+      "Tailwind",
+      "JavaScript",
+      "React.js",
+      "Express.js",
+      "Node.js",
+      "Firebase",
+      "MongoDB"
+    ],
+    "liveLink": "https://nearby-care.web.app",
+    "githubClientLink": "https://github.com/mkiuzzl01/Nearby-Care",
+    "githubServerLink": "https://github.com/mkiuzzl01/Nearby-Care-Server"
+  },
+  {
+    "id": 2,
+    "title": "Tech-Tools",
+    "description": "Users post and manage tech products. Customers view featured items, interact with voting, reviews, and reports. Dashboard roles include users, moderators, admins. Moderators review posts and reports; admins manage roles, monitor site activity, analyze product data with visual charts. Account verification via profile payments.",
+    "imageUrl": "https://i.ibb.co.com/cvBsdty/screencapture-tech-tools-f4a05-web-app-2024-10-02-17-40-29.png",
+    "tag": "Modern",
+    "coreFeatures": [
+      "Users can post and modify tech products.",
+      "Customers can view all products, including featured and trending items.",
+      "Users, moderators, and admins have specific dashboard functionalities.",
+      "Moderators manage new, reported products, and reviews.",
+      "Admins manage user roles and monitor site statistics.",
+      "Users can verify their accounts via payment."
+    ],
+    "technologiesUsed": [
+      "HTML5",
+      "CSS3",
+      "Tailwind",
+      "JavaScript",
+      "React.js",
+      "Express.js",
+      "Node.js",
+      "Firebase",
+      "MongoDB"
+    ],
+    "liveLink": "https://tech-tools-f4a05.web.app",
+    "githubClientLink": "https://github.com/mkiuzzl01/Tech-Tools",
+    "githubServerLink": "https://github.com/mkiuzzl01/Tech-Tools-Server-site"
+  },
+  {
+    "id": 3,
+    "title": "Share With Their",
+    "description": "This platform is a cutting-edge Transaction Management System, designed to facilitate seamless and secure financial transactions similar to industry leaders like Bkash or Nagod. It enables various transactions, including user-to-user, user-to-agent, and agent-to-agent transfers.",
+    "imageUrl": "https://i.ibb.co.com/DQNM16G/Screenshot-2024-10-02-182825.png",
+    "tag": "Latest",
+    "coreFeatures": [
+      "This enables users to send money, cash in, or cash out with users and agents, providing flexible transaction options.",
+      "Offers specialized dashboards for users, agents, and administrators, ensuring a tailored experience.",
+      "Provides users full access to their transaction history, ensuring transparency and easy tracking."
+    ],
+    "technologiesUsed": [
+      "HTML5",
+      "CSS3",
+      "Tailwind",
+      "JavaScript",
+      "React.js",
+      "Express.js",
+      "Node.js",
+      "MongoDB"
+    ],
+    "liveLink": "https://sharewiththeir.web.app",
+    "githubClientLink": "https://github.com/mkiuzzl01/Share-With-Their-Client-Site",
+    "githubServerLink": "https://github.com/mkiuzzl01/Share-With-Their-Server-Site"
+  }
+]
