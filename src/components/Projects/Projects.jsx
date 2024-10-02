@@ -50,7 +50,9 @@ const ProjectsSection = () => {
               }}
               className=""
             >
-              <div className="card_container grid grid-cols-1 md:grid-cols-3 grid-flow-col md:grid-flow-row">
+              <div className="card_container grid grid-cols-1 md:grid-cols-3 grid-flow-col md:grid-flow-row"
+              data-aos="flip-left"
+              >
                 <div
                   className="project_card border-2 border-yellow-500"
                   style={{ backgroundImage: `url(${project.imageUrl})` }}
