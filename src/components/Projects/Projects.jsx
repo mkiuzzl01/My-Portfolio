@@ -21,8 +21,6 @@ const ProjectsSection = () => {
     getData();
   }, []);
 
-  console.log(projects);
-
   useEffect(() => {
     AOS.init({ duration: 1200 });
   }, []);
@@ -54,7 +52,7 @@ const ProjectsSection = () => {
             >
               <div className="card_container grid grid-cols-1 md:grid-cols-3 grid-flow-col md:grid-flow-row">
                 <div
-                  className="project_card"
+                  className="project_card border-2 border-yellow-500"
                   style={{ backgroundImage: `url(${project.imageUrl})` }}
                   data-tooltip-id="my-tooltip"
                   data-tooltip-content={project?.title}
