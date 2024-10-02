@@ -28,7 +28,7 @@ const ProjectsSection = () => {
   }, []);
 
   return (
-    <section id="Projects" className="py-10 bg-gray-50">
+    <section id="Projects" className="py-10 bg-gray-50 relative">
       <div className="text-center pb-10 pt-24">
         <h1 className="text-3xl font-bold mb-4" data-aos="fade-down">
           My Work & Projects
@@ -43,9 +43,9 @@ const ProjectsSection = () => {
           meet client requirements and surpass expectations.
         </p>
       </div>
-      <div className="flex flex-col items-center md:flex-row md:justify-around">
-        {projects.map((project) => (
-          <div>
+      <div className="flex flex-col items-center md:flex-row md:justify-around gap-4">
+        {projects.map((project,idx) => (
+          <div key={idx}>
             <button
               onClick={() => {
                 setIsOpen(true), setProjectsInfo(project);
@@ -64,12 +64,14 @@ const ProjectsSection = () => {
           </div>
         ))}
       </div>
+      <div className="absolute  right-2">
+        <Modal
+          isOpen={isOpen}
+          setIsOpen={setIsOpen}
+          projectInfo={projectInfo}
+        ></Modal>
+      </div>
       <Tooltip id="my-tooltip" />
-      <Modal
-        isOpen={isOpen}
-        setIsOpen={setIsOpen}
-        projectInfo={projectInfo}
-      ></Modal>
     </section>
   );
 };

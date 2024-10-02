@@ -2,12 +2,12 @@ import React from "react";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 import { Outlet } from "react-router-dom";
-import Banner from "../components/Banner/Banner";
+
 
 const Layout = () => {
   return (
     <div>
-      <main className="max-w-screen-2xl m-auto">
+      <main className="max-w-screen-2xl overflow-hidden m-auto">
       <nav className="z-10 top-0 sticky">
         <Navbar></Navbar>
       </nav>

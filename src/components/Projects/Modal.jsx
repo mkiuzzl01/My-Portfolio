@@ -8,7 +8,13 @@ const Modal = ({ isOpen, setIsOpen, projectInfo }) => {
   useEffect(() => {
     if (isOpen) {
       setShowModal(true);
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
     }
+    return () => {
+      document.body.style.overflow = "auto";
+    };
   }, [isOpen]);
 
   const handleClose = () => {
@@ -18,69 +24,69 @@ const Modal = ({ isOpen, setIsOpen, projectInfo }) => {
     }, 300);
   };
 
-  console.log(projectInfo);
-
   return (
-    <div className="relative flex justify-center">
+    <>
       {isOpen && (
-        <div className="fixed inset-0 z-10 overflow-y-auto">
-          <div className="flex items-center justify-center min-h-screen">
-            <div
-              className={`fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity  duration-300 ${
-                showModal ? "opacity-100" : "opacity-0"
-              }`}
-            ></div>
-            <div
-              className={`relative overflow-hidden  transition-all transform bg-white rounded-lg shadow-xl md:max-w-2xl w-full m-auto md:p-10 p-10  ${
-                showModal ? "opacity-100 scale-100" : "opacity-0 scale-95"
-              } transition duration-300`}
-            >
-                <div className="absolute right-0 top-0">
+        <div className="fixed inset-0 z-50 flex items-center justify-center px-4 sm:px-6">
+          <div
+            className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm"
+            onClick={handleClose}
+          ></div>
+
+          <div
+            className={`relative bg-white rounded-lg shadow-lg p-4 sm:p-6 w-full max-w-sm sm:max-w-md lg:max-w-2xl overflow-hidden transition-all transform ${
+              showModal ? "opacity-100 scale-100" : "opacity-0 scale-95"
+            } duration-300 max-h-[90vh] overflow-y-auto`}
+          >
+            <div className="absolute top-2 right-2">
               <button onClick={handleClose}>
-              <FaRegCircleXmark size={20} color="red" />
+                <FaRegCircleXmark size={24} color="red" title="Exit" />
               </button>
+            </div>
+            <div className="relative">
+              <h1 className="text-2xl font-bold text-gray-800 mb-4">
+                {projectInfo?.title}
+              </h1>
+              <span className="text-blue-600 font-bold">Features</span>
+              <ul className="list-disc px-4">
+                {projectInfo?.coreFeatures.map((feature, idx) => (
+                  <li key={idx}>{feature}</li>
+                ))}
+              </ul>
+              <div className="flex flex-wrap gap-2 pt-4">
+                {projectInfo?.technologiesUsed?.map((tech, idx) => (
+                  <span
+                    key={idx}
+                    className="inline-block bg-yellow-200 text-yellow-800 px-2 py-1 rounded"
+                  >
+                    {tech}
+                  </span>
+                ))}
               </div>
-              <div className="relative">
-                <h1
-                  className="text-2xl font-bold text-gray-800"
-                  id="modal-title"
-                >
-                  {projectInfo?.title}
-                </h1>
-                <span className="text-blue-600 font-bold">Features</span>
-                <ul className="list-disc px-4">
-                  {projectInfo?.coreFeatures.map((feature, idx) => (
-                    <li>{feature}</li>
-                  ))}
-                </ul>
-                <div className="flex pt-2 flex-row gap-2">
-                  {projectInfo?.technologiesUsed?.map((tech, idx) => (
-                    <div className="text-yellow-500">{tech}</div>
-                  ))}
-                </div>
-                <div className="flex flex-row justify-between pt-2">
+              <div className="flex flex-col md:flex-row justify-between items-center gap-2 pt-6">
+                <button className="btn btn-sm">
+                  <Link target="_blank" to={projectInfo?.liveLink}>
+                    Live Link
+                  </Link>
+                </button>
+                <button className="btn btn-sm">
+                  <Link target="_blank" to={projectInfo?.githubClientLink}>
+                    Client Site Link
+                  </Link>
+                </button>
+                {projectInfo?.githubServerLink && (
                   <button className="btn btn-sm">
-                    <Link target="_blank" to={projectInfo?.liveLink}>
-                      Live Link
-                    </Link>
-                  </button>
-                  <button className="btn btn-sm">
-                    <Link target="_blank" to={projectInfo?.githubClientLink}>
-                      Client Site Link
-                    </Link>
-                  </button>
-                  <span className="btn btn-sm">
                     <Link target="_blank" to={projectInfo?.githubServerLink}>
                       Server Site Link
                     </Link>
-                  </span>
-                </div>
+                  </button>
+                )}
               </div>
             </div>
           </div>
         </div>
       )}
-    </div>
+    </>
   );
 };
 
