@@ -30,7 +30,6 @@ const Modal = ({ isOpen, setIsOpen, projectInfo }) => {
         <div className="fixed inset-0 z-50 flex items-center justify-center px-4 sm:px-6">
           <div
             className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm"
-            onClick={handleClose}
           ></div>
 
           <div
@@ -40,7 +39,7 @@ const Modal = ({ isOpen, setIsOpen, projectInfo }) => {
           >
             <div className="absolute top-2 right-2">
               <button onClick={handleClose}>
-                <FaRegCircleXmark size={24} color="red" title="Exit" />
+                <FaRegCircleXmark className="text-red-500 text-2xl hover:text-red-700" title="Exit" />
               </button>
             </div>
             <div className="relative">
