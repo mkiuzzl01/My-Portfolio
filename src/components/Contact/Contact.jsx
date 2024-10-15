@@ -1,18 +1,22 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { FaArrowsSpin } from "react-icons/fa6";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail, MdLocationPin } from "react-icons/md";
 import axios from "axios";
 import Swal from "sweetalert2";
-import AOS from 'aos';
-import 'animate.css';
+import AOS from "aos";
+import "animate.css";
 
 const Contact = () => {
+  const [isLoading, setLoading] = useState(false);
+
   useEffect(() => {
     AOS.init({ duration: 1200 });
   }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
     const form = e.target;
     const name = form.Name.value;
     const email = form.Email.value;
@@ -33,51 +37,62 @@ const Contact = () => {
     };
 
     try {
-      const res = await axios.post("https://api.emailjs.com/api/v1.0/email/send", data, {
-        headers: {
-          'Content-Type': 'application/json'
+      const res = await axios.post(
+        "https://api.emailjs.com/api/v1.0/email/send",
+        data,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
         }
-      });
-      if(res.data === 'OK'){
+      );
+      if (res.data === "OK") {
+        setLoading(false)
         form.reset();
         Swal.fire({
-            position: "top",
-            icon: "success",
-            title: "Successfully sent your massage",
-            showConfirmButton: false,
-            timer: 1500,
-            showClass: {
-                popup: `
+          position: "top",
+          icon: "success",
+          title: "Successfully sent your massage",
+          showConfirmButton: false,
+          timer: 1500,
+          showClass: {
+            popup: `
                   animate__animated
                   animate__fadeInUp
                   animate__faster
-                `
-              },
-              hideClass: {
-                popup: `
+                `,
+          },
+          hideClass: {
+            popup: `
                   animate__animated
                   animate__fadeOutDown
                   animate__faster
-                `
-              }
-          });
-      };
+                `,
+          },
+        });
+      }
     } catch (error) {
-      console.error(error.response ? error.response.data : error.message);
+      alert(error.response ? error.response.data : error.message);
+      return setLoading(false);
     }
   };
-  
+
   return (
     <section id="Contact">
       <div className="text-center pb-10 pt-24 animate__animated animate__fadeInDown">
         <h1 className="text-3xl font-bold mb-4">Get In Touch!</h1>
         <p>
-        I'm eager to connect with you! Whether you have a project in mind, a question, or just want to say hello, <br /> feel free to reach out. Let's collaborate and bring your ideas to life!
+          I'm eager to connect with you! Whether you have a project in mind, a
+          question, or just want to say hello, <br /> feel free to reach out.
+          Let's collaborate and bring your ideas to life!
         </p>
       </div>
       <div className="flex px-5 md:px-10 flex-col-reverse items-center lg:flex-row lg:justify-evenly mb-16 animate__animated animate__fadeInUp">
         <div className="w-full lg:w-1/2">
-          <form onSubmit={handleSubmit} className="animate__animated animate__fadeInLeft">
+          <form
+            onSubmit={handleSubmit}
+            className="animate__animated animate__fadeInLeft"
+          >
             <div className="grid grid-cols-1 md:grid-cols-2  md:gap-4">
               <div className="relative z-0 w-full mb-5 group">
                 <input
@@ -145,16 +160,23 @@ const Contact = () => {
               </div>
               <div>
                 <button
+                disabled={isLoading}
                   type="submit"
                   className="inline-block bg-orange-500 text-white px-6 py-2 text-lg hover:bg-orange-600 transition mr-4 animate__animated animate__fadeInUp"
                 >
-                  Submit
+                  {isLoading ? (
+                    <FaArrowsSpin className="animate-spin w-14 my-1"></FaArrowsSpin>
+                  ) : (
+                   <div className="">Submit</div>
+                  )}
                 </button>
               </div>
             </div>
           </form>
         </div>
-        <div className="divider lg:divider-horizontal animate__animated animate__fadeIn">OR</div>
+        <div className="divider lg:divider-horizontal animate__animated animate__fadeIn">
+          OR
+        </div>
         <div className="w-full lg:w-1/2 space-y-4 animate__animated animate__fadeInRight">
           <div>
             <div className="flex items-center space-x-2">
