@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import "./Projects.css";
 import "react-tooltip/dist/react-tooltip.css";
 import { Tooltip } from "react-tooltip";
 import Modal from "./Modal";
@@ -26,7 +25,7 @@ const ProjectsSection = () => {
   }, []);
 
   return (
-    <section id="Projects" className="py-10 bg-gray-50 relative">
+    <section id="Projects" className=" bg-gray-50 relative">
       <div className="text-center pb-10 pt-24">
         <h1 className="text-3xl font-bold mb-4" data-aos="fade-down">
           My Work & Projects
@@ -41,28 +40,26 @@ const ProjectsSection = () => {
           meet client requirements and surpass expectations.
         </p>
       </div>
-      <div className="flex flex-col items-center md:flex-row md:justify-around gap-4">
-        {projects.map((project,idx) => (
+      <div className="flex justify-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-12">
+        {projects.map((project, idx) => (
           <div key={idx}>
             <button
               onClick={() => {
                 setIsOpen(true), setProjectsInfo(project);
               }}
-              className=""
-            >
-              <div className="card_container grid grid-cols-1 md:grid-cols-3 grid-flow-col md:grid-flow-row"
               data-aos="flip-left"
-              >
-                <div
-                  className="project_card border-2 border-yellow-500"
-                  style={{ backgroundImage: `url(${project.imageUrl})` }}
-                  data-tooltip-id="my-tooltip"
-                  data-tooltip-content={project?.title}
-                ></div>
-              </div>
+            >
+              <div
+                className="w-96 h-[500px] rounded-lg transition-all ease-in-out duration-[3s] hover:bg-bottom bg-cover bg-top  border-2 border-yellow-500"
+                style={{ backgroundImage: `url(${project.imageUrl})` }}
+                data-tooltip-id="my-tooltip"
+                data-tooltip-content={project?.title}
+              ></div>
             </button>
           </div>
         ))}
+      </div>
       </div>
       <div className="absolute  right-2">
         <Modal

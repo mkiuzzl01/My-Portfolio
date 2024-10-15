@@ -7,7 +7,7 @@ const Banner = () => {
   return (
     <section
       id="Home"
-      className="relative h-screen md:h-full -top-16 pt-24 flex items-center justify-center overflow-hidden bg-gray-100"
+      className="relative  h-screen md:h-full -top-16 pt-24 flex items-center justify-center overflow-hidden bg-gray-100"
     >
       <div className="absolute inset-0 z-0">
         <svg

@@ -144,7 +144,7 @@ const SkillsSection = () => {
               onMouseLeave={handleMouseLeave}
               className="group transform transition-transform duration-300 hover:scale-105"
             >
-              <div className="bg-[#FEF5E7] rounded-lg shadow-md p-6 flex flex-col items-center group-hover:bg-yellow-100 transition-all duration-300">
+              <div className="bg-yellow-50 rounded-lg shadow-md p-6 flex flex-col items-center group-hover:bg-yellow-100 transition-all duration-300">
                 <div
                   className={`mb-2 text-3xl text-yellow-500 transition-transform ${
                     hoveredSkill === index ? "animate-bounce" : ""

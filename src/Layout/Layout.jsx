@@ -5,9 +5,9 @@ import { Outlet } from "react-router-dom";
 
 const Layout = () => {
   return (
-    <div>
+    <div className="overflow-hidden">
       <main className="max-w-screen-2xl m-auto">
-        <nav className="sticky top-0 z-50">
+        <nav className="fixed top-0 left-0 right-0 z-50 max-w-screen-2xl m-auto">
           <Navbar />
         </nav>
         <div className="min-h-[calc(100vh-290px)]">

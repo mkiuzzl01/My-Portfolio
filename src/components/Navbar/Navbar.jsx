@@ -17,6 +17,7 @@ export const scrollToSection = (navId) => {
 const Navbar = () => {
   const [active, setActive] = useState("Home");
   const [scroll, setScroll] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   const determineActiveSection = () => {
     for (let i = navId.length - 1; i >= 0; i--) {
@@ -43,9 +44,6 @@ const Navbar = () => {
 
     window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
   }, []);
 
   return (
@@ -55,6 +53,7 @@ const Navbar = () => {
           <div className="dropdown">
             <div
               tabIndex={0}
+              onClick={() => setIsOpen(!isOpen)}
               role="button"
               className="btn btn-ghost lg:hidden"
             >
@@ -73,25 +72,28 @@ const Navbar = () => {
                 />
               </svg>
             </div>
-            <ul
-              tabIndex={0}
-              className="space-y-4  menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
-            >
-              {navId.map((id, i) => (
-                <li key={i} onClick={() => scrollToSection(id)}>
-                  <Link
-                    to="/"
-                    className={
-                      active === id
-                        ? "border-b-2 rounded-none border-red-500 font-bold pb-2 "
-                        : "font-bold "
-                    }
-                  >
-                    {id}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            {isOpen && (
+              <ul
+                onClick={()=> setIsOpen(!isOpen)}
+                tabIndex={0}
+                className="space-y-4  menu-sm dropdown-content bg-[#FEF5E7] rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              >
+                {navId.map((id, i) => (
+                  <li key={i} onClick={() => scrollToSection(id)}>
+                    <Link
+                      to="/"
+                      className={
+                        active === id
+                          ? "border-b-2 rounded-none border-red-500 font-bold pb-2 "
+                          : "font-bold "
+                      }
+                    >
+                      {id}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
           <a
             className="btn btn-ghost text-xl"
@@ -122,16 +124,16 @@ const Navbar = () => {
           <span className="relative flex">
             <span className="animate-ping absolute h-full w-full rounded-full bg-sky-400 opacity-75"></span>
             <div className="avatar">
-            <Link
-              to="https://github.com/mkiuzzl01"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="Visit My Github Profile"
-              className="btn flex items-center rounded-full "
-            >
-              <IoLogoGithub size={20} className="" />
-              GitHub
-            </Link>
+              <Link
+                to="https://github.com/mkiuzzl01"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Visit My Github Profile"
+                className="btn flex items-center rounded-full "
+              >
+                <IoLogoGithub size={20} className="" />
+                GitHub
+              </Link>
             </div>
           </span>
         </div>

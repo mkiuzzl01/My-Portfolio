@@ -28,7 +28,7 @@ const About_Me = () => {
       {/* Text Section */}
       <div className="md:w-1/2 mt-10 md:mt-0 md:pl-10">
         <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          I'm a Dedicated and Enthusiastic Frontend Developer
+          I'm a Dedicated and Enthusiastic <br /> Web Developer
         </h1>
         <p className="text-lg text-gray-600 mb-4">
           with a strong focus on creating visually appealing and highly
