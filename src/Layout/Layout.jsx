@@ -3,20 +3,19 @@ import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 import { Outlet } from "react-router-dom";
 
-
 const Layout = () => {
   return (
     <div>
-      <main className="max-w-screen-2xl overflow-hidden m-auto">
-      <nav className="z-10 top-0 sticky">
-        <Navbar></Navbar>
-      </nav>
-      <div className="min-h-[calc(100vh-290px)]">
-        <Outlet></Outlet>
-      </div>
+      <main className="max-w-screen-2xl m-auto">
+        <nav className="sticky top-0 z-50">
+          <Navbar />
+        </nav>
+        <div className="min-h-[calc(100vh-290px)]">
+          <Outlet />
+        </div>
       </main>
       <footer>
-        <Footer></Footer>
+        <Footer />
       </footer>
     </div>
   );

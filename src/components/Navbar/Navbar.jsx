@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import "./Navbar.css"; // Import your CSS file for styling
+import "./Navbar.css";
 import { IoLogoGithub } from "react-icons/io";
 import { navId } from "./NavId";
 
@@ -33,7 +33,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 300) {
+      if (window.scrollY) {
         setScroll(true);
       } else {
         setScroll(false);
