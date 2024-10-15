@@ -50,7 +50,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <div className={`navbar ${scroll ? "bg-[#FEF5E7]" : "bg-transparent"}`}>
+      <div className={`navbar  ${scroll ? "bg-[#FEF5E7]" : "bg-transparent"}`}>
         <div className="navbar-start">
           <div className="dropdown">
             <div

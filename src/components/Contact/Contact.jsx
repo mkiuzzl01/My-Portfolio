@@ -47,7 +47,7 @@ const Contact = () => {
         }
       );
       if (res.data === "OK") {
-        setLoading(false)
+        setLoading(false);
         form.reset();
         Swal.fire({
           position: "top",
@@ -72,7 +72,8 @@ const Contact = () => {
         });
       }
     } catch (error) {
-      Swal.fire({
+      setLoading(false);
+      return Swal.fire({
         position: "top",
         icon: "error",
         title: "Something Wrong! Please Try Again",
@@ -94,7 +95,6 @@ const Contact = () => {
         },
       });
       // console.log(error.response ? error.response.data : error.message);
-      return setLoading(false);
     }
   };
 
@@ -181,14 +181,14 @@ const Contact = () => {
               </div>
               <div>
                 <button
-                disabled={isLoading}
+                  disabled={isLoading}
                   type="submit"
-                  className="inline-block bg-orange-500 text-white px-6 py-2 text-lg hover:bg-orange-600 transition mr-4 animate__animated animate__fadeInUp"
+                  className="btn w-28 rounded-none  bg-orange-500 text-white text-lg hover:bg-orange-600"
                 >
                   {isLoading ? (
-                    <FaArrowsSpin className="animate-spin w-14 my-1"></FaArrowsSpin>
+                    <div className=""><FaArrowsSpin className="animate-spin text-orange-500"></FaArrowsSpin></div>
                   ) : (
-                   <div className="">Submit</div>
+                    <div className="">Send</div>
                   )}
                 </button>
               </div>
