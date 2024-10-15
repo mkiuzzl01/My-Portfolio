@@ -30,12 +30,12 @@ const ProjectsSection = () => {
         <h1 className="text-3xl font-bold mb-4" data-aos="fade-down">
           My Work & Projects
         </h1>
-        <p data-aos="fade-up">
+        <p className="px-2 md:px-14" data-aos="fade-up">
           Explore my variety of Projects. Each demonstrates my proficiency in
           building dynamic, responsive web applications using React.js, HTML5,
-          CSS3, and more. <br /> These projects showcase my dedication to
+          CSS3, and more. These projects showcase my dedication to
           delivering functional and visually appealing solutions, from
-          interactive dashboards to user-friendly interfaces. <br /> Dive into
+          interactive dashboards to user-friendly interfaces. Dive into
           each project to see how I blend creativity with technical skills to
           meet client requirements and surpass expectations.
         </p>

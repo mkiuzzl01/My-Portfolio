@@ -59,7 +59,7 @@ const Academic = () => {
     <section id="Academic" className="py-10 bg-gray-50">
       <div className="text-center pb-10 pt-24">
         <h1 className="text-3xl font-bold mb-4" data-aos="fade-down">My Academic Background</h1>
-        <p data-aos="fade-up">
+        <p className='px-2' data-aos="fade-up">
           Here is  a summary of my educational background and the courses I've completed to enhance my skills..
         </p>
       </div>

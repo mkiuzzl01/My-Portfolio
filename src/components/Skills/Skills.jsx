@@ -125,7 +125,7 @@ const SkillsSection = () => {
     <section id="Skills" className="py-16">
       <div className="container mx-auto text-center">
         <h2 className="text-3xl font-bold mb-4">Skills</h2>
-        <p className="text-gray-600 mb-12">
+        <p className="text-gray-600 mb-12 px-2 md:px-14">
           I have a strong foundation in frontend development, specializing in
           technologies like HTML5, CSS3, JavaScript, React.js, and responsive
           design. I also excel in backend technologies such as Node.js,

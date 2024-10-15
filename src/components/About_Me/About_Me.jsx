@@ -27,10 +27,10 @@ const About_Me = () => {
 
       {/* Text Section */}
       <div className="md:w-1/2 mt-10 md:mt-0 md:pl-10">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          I'm a Dedicated and Enthusiastic <br /> Web Developer
+        <h1 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
+          I'm a Dedicated and <br /> Enthusiastic Web Developer
         </h1>
-        <p className="text-lg text-gray-600 mb-4">
+        <p className="md:text-lg text-gray-600 mb-4">
           with a strong focus on creating visually appealing and highly
           functional web applications. With a solid foundation in HTML, CSS, and
           JavaScript, I bring modern designs to life and ensure seamless user

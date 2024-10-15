@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import "./Navbar.css";
 import { IoLogoGithub } from "react-icons/io";
 import { navId } from "./NavId";
 
@@ -47,8 +46,8 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div>
-      <div className={`navbar  ${scroll ? "bg-[#FEF5E7]" : "bg-transparent"}`}>
+    <div> 
+      <div className={`navbar  ${scroll ? "bg-[#FEF5E7]" : "bg-transparent"} transition-all ease-in duration-500`}>
         <div className="navbar-start">
           <div className="dropdown">
             <div
