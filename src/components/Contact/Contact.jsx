@@ -72,7 +72,28 @@ const Contact = () => {
         });
       }
     } catch (error) {
-      alert(error.response ? error.response.data : error.message);
+      Swal.fire({
+        position: "top",
+        icon: "error",
+        title: "Something Wrong! Please Try Again",
+        showConfirmButton: false,
+        timer: 1500,
+        showClass: {
+          popup: `
+                animate__animated
+                animate__fadeInUp
+                animate__faster
+              `,
+        },
+        hideClass: {
+          popup: `
+                animate__animated
+                animate__fadeOutDown
+                animate__faster
+              `,
+        },
+      });
+      // console.log(error.response ? error.response.data : error.message);
       return setLoading(false);
     }
   };
