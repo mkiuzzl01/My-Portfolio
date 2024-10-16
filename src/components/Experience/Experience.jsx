@@ -9,7 +9,7 @@ const experiences = [
     role: "Junior Web Developer",
     type:"Industrial attachment",
     company: "Kaizen IT Ltd",
-    period: "10 Oct 22 - 30 Dec 22",
+    period: "10 Oct 22 - 30 Jun 23",
     description:
       "Utilized HTML, CSS, JavaScript to build responsive and user-friendly web applications",
     icon: <FaIndustry className="text-blue-600" />,
@@ -18,7 +18,7 @@ const experiences = [
     id: 2,
     role: "Junior Web Designer",
     company: "Sohoj it & Freelancing care",
-    period: "1 Jan 22 - 30 Oct 22",
+    period: "1 Jan 22 - 10 Sep 22",
     description:
       "Applied modern front-end technologies and frameworks such as Tailwind CSS and Bootstrap to enhance the visual appeal and functionality of web pages.",
     icon: <FaIndustry className="text-red-500" />,

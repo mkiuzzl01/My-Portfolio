@@ -11,7 +11,7 @@ const education = [
     id: 1,
     institution: 'Southeast University',
     degree: 'Bachelor of Science in Computer Science',
-    year: '2022 Running',
+    year: '2023 - Running',
     description: "Gaining foundational and advanced knowledge in computer science principles, programming languages, and software development. Engaging in hands-on projects and collaborative learning to enhance problem-solving skills. Actively participating in courses on data structures, algorithms, web development, and databases. Continuously upgrading skills to stay current with emerging technologies.",
     icon: faGraduationCap,
     Link: 'https://seu.edu.bd'
@@ -20,7 +20,7 @@ const education = [
     id: 2,
     institution: 'Barisal Polytechnic Institute',
     degree: 'Diploma in Computer Engineering',
-    year: '2012 - 2016',
+    year: '2018 - 2022',
     description: 'Acquired a strong foundation in electronics, computer hardware, and software engineering. Developed practical skills through lab work, projects, and internships. Studied digital electronics, microprocessor systems, network fundamentals, and software development. Demonstrated consistent academic performance and innovation.',
     icon: faSchool,
     Link: 'https://barishalpoly.gov.bd'
